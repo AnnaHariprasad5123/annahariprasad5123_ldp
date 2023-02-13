@@ -1,2 +1,1 @@
-# annahariprasad5123_ldp
-GitKatas are completed
+GitKatas assignment is completed
