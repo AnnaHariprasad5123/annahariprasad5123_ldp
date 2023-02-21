@@ -22,7 +22,9 @@ def encoded_message(message,key):
        Input : message, key
        Returns : encoded message
     '''
-    encoded = ''.join(chr(ord(i)+key) for i in message)
+    s = set(message)
+    d = {i:chr(ord(i)+key) for i in s}
+    encoded = ''.join(str(d[i]) for i in message)
     return encoded
 
 def decoded_message(message,key):
@@ -31,7 +33,10 @@ def decoded_message(message,key):
        Input : encoded message, key
        Returns : Plain text
     '''
-    decoded = ''.join(chr(ord(i)-key) for i in message)
+    s = set(message)
+    d = {i:chr(ord(i)-key) for i in s}
+     
+    decoded = ''.join(d[i]for i in message)
     return decoded
 
 message = "Hello Samad! This is an encoded message. You are number 1 mentor!!"
