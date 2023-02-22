@@ -22,9 +22,7 @@ def encoded_message(message,key):
        Input : message, key
        Returns : encoded message
     '''
-    s = set(message)
-    d = {i:chr(ord(i)+key) for i in s}
-    encoded = ''.join(str(d[i]) for i in message)
+    encoded = ''.join(chr(ord(i)+key) for i in message)
     return encoded
 
 def decoded_message(message,key):
@@ -33,10 +31,7 @@ def decoded_message(message,key):
        Input : encoded message, key
        Returns : Plain text
     '''
-    s = set(message)
-    d = {i:chr(ord(i)-key) for i in s}
-     
-    decoded = ''.join(d[i]for i in message)
+    decoded = ''.join(chr(ord(i)-key) for i in message)
     return decoded
 
 message = input('Enter plain text : ')
@@ -46,6 +41,7 @@ encode = encoded_message(message,key)
 decode = decoded_message(encode,key)
 print("Encoded message : ",encode)
 print("Decoded message : ",decode)
+
 
 '''
 Input :
