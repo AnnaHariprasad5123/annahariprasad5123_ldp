@@ -47,7 +47,15 @@ decode = decoded_message(encode,key)
 print("Encoded message : ",encode)
 print("Decoded message : ",decode)
 
-
-
+'''
+Input :
+Enter plain text : Hi Hello Everyone
+Enter key value  : 5
+'''
+'''
+Output : 
+Encoded message :  Mn%Mjqqt%J{jw~tsj
+Decoded message :  Hi Hello Everyone
+'''
 
 
