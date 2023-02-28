@@ -1,0 +1,75 @@
+<!-- Create a simple application which displays two counts:
+Local Score, Session Score and a button to increment these counts. 
+Local score must persist in Local Storage and Session score must persist 
+in Session Storage and must reset on closing the session. -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Local & Session Storage</title>
+
+        <style>
+
+            .scores{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            span{
+                color:red;
+            }
+
+            button{
+                padding:10px;
+                width:100px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="scores">
+
+            <h1>Local Score : <span id="localCount">0</span></h1>
+            <h1>Session Score : <span id="sessionCount">0</span></h1>
+        
+            <button type="submit" id="click">Click</button>    
+        </div>
+
+        <script>
+            
+        let localCount = document.querySelector('#localCount');
+        let sessionCount = document.querySelector('#sessionCount');
+        let countBtn = document.querySelector('#click');
+        
+        let localScore = parseInt(localStorage.getItem('localScore')) || 0 ;
+        localCount.textContent = localScore;
+
+
+        let sessionScore = parseInt(sessionStorage.getItem('sessionScore')) || 0 ;
+        sessionCount.textContent = sessionScore;
+
+        //localStorage.clear();
+        //localCount.textContent = 0;
+        
+        countBtn.addEventListener('click', () => {
+
+            localScore++;
+            sessionScore++;
+
+            localCount.textContent = localScore;
+            sessionCount.textContent = sessionScore;
+
+            
+            localStorage.setItem('localScore', localScore);
+            sessionStorage.setItem('sessionScore', sessionScore);
+
+        });
+
+        </script>
+    </body>
+</html>
