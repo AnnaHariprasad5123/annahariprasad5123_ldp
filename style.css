@@ -1,0 +1,123 @@
+*{
+    margin : 0px;
+    font-family: cursive;
+    color:whitesmoke;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:orange;
+    margin-top: 0;
+}
+
+header h1{
+    text-align: center;
+    background-color: red;
+    margin-bottom: 0;
+    padding:10px;
+}
+.item{
+    margin:10px;
+    padding: 2px; 
+}
+.item a{
+    text-decoration: none;
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    height:70vh;
+}
+
+.greetings h1{
+    font-family: helvetica;
+    background-color: blue;
+    letter-spacing: 2px;
+    word-spacing: 20px;
+    padding:30px;
+    border-radius: 10px;
+}
+
+.info h1{
+    color:black;
+    text-align : center;
+    padding : 15px;
+}
+
+
+.details form{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    background-color: skyblue;   
+    border-radius: 20px;
+}
+
+.details form label{
+    color:white;
+    margin:5px;
+    padding: 5px;
+}
+
+.details form textarea{
+    width:100%;
+    height: 80px;
+    color:black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.details form input{
+    color : black;
+    border: 1px solid black;
+    border-radius: 10px;
+    height:20px;
+}
+
+.submit{
+    margin:10px;
+    color:black;
+    border: 1px solid black
+    border-radius: 20px;
+    width:80px;
+    position:relative;
+    left:50px;
+}
+
+
+.gallery {
+   display:flex;
+   flex-flow: column wrap;
+   height: 120vh;
+   justify-content: flex-start;
+}
+
+
+.images img{
+    height:120px;
+    width:150px;
+    padding:1px;
+}
+
+#name{
+    color : red;
+    font-family: papyrus;
+}
+
+footer{
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+}
+
+.item a:hover{
+    background-color: white;
+    color:black;
+    padding:10px;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
