@@ -1,35 +1,87 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
+<html lang="en">
 
-        <title>Home</title>
-        <link href="./style.css" rel="stylesheet">
+<head>
 
-    </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemoso Restaurant</title>
 
-    <body>
+    <link href="app/css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+</head>
+
+<body onload="page_load()">
+
+    <div id="tables">
         
-    <header>
-        <h1>Welcome to Home Page</h1>
-        <nav class="navbar">
-            <div class="item"><a href="./index.html">Home</a></div>
-            <div class="item"><a href="./about.html">About</a></div>
-            <div class="item"><a href="./contact.html">Contact</a></div>
-            <div class="item"><a href="./gallery.html">Gallery</a></div>
-        </nav>
-    </header>
+        <div id="header">
+            <h3>Tables</h3> 
 
-    <main>
-        <div class="greetings">
-           <h1>Welcome Everyone</h1>
+            <input type="search" id="table_search" oninput = "search_table()" placeholder="Search Table">
+        
         </div>
-    </main>
 
-    <footer>
-            <h1>Thank You</h1>
-    </footer>
+        <div class="left-section">
+            <div class="table_list">
 
-    </body>
+                <!-- Table List -->
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="menu">
+        <div id="header">
+            <h3>Menu</h3>
+
+            <input type="search" id='item_search' oninput="search_item()" placeholder="Search menu...by course, by food">
+        </div>
+
+        <div class="menu_list">
+
+            <!-- Menu List -->
+
+        </div>
+
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <div id="modal-close">
+                <button onclick="closeModal()" id="button-close">X</button>
+            </div>
+
+            <div id="modal-table-name">
+
+            </div>
+
+            <div>
+                
+                <table id="table-info-items">
+                
+                </table>
+
+                <div id="modal-footer">
+
+                </div>
+
+                <div id="generate-bill">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="app/script/script.js"></script>
+
+</body>
 
 </html>
